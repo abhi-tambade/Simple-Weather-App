@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: whitesmoke;
+        }
+        .parent-div {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .border-section {
+            background-color: white;
+
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 0px;
+            padding: 0px 40px;
+            border-radius: 10px;
+            border: 2px solid lightgray;
+        }
+
+        .img-div {
+            height: 200px;
+            width: 100%;
+            border-radius: 10px;
+            background-color: #00A9FF;
+            /* background-image: url("/public/images/weather-background2.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 200%; */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #weather-img {
+            border-radius: 10px;
+        }
+
+        #city-heading {
+            font-size: 3rem;
+            text-align: center;
+            text-shadow: 2px 1px 5px lightgray;
+        }
+
+        #simple-weather-app {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px #000000;
+            text-align: center;
+        }
+
+        .form-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .group {
+        display: flex;
+        line-height: 28px;
+        align-items: center;
+        position: relative;
+        max-width: 190px;
+        margin-right: 20px;
+        }
+
+        .input {
+        width: 100%;
+        height: 40px;
+        line-height: 28px;
+        padding: 0 1rem;
+        padding-left: 2.5rem;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        outline: none;
+        background-color: #f3f3f4;
+        color: #0d0c22;
+        transition: .3s ease;
+        }
+
+        .input::placeholder {
+        color: #9e9ea7;
+        }
+
+        .input:focus, input:hover {
+        outline: none;
+        border-color: rgba(234,76,137,0.4);
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+        }
+
+        .icon {
+        position: absolute;
+        left: 1rem;
+        fill: #9e9ea7;
+        width: 1rem;
+        height: 1rem;
+        }
+
+        button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        border-radius: 10px;
+        border: 1px solid #F2BED1;
+        padding: 10px 20px;
+        }
+
+        button > svg {
+        margin-left: 5px;
+        transition: all 0.4s ease-in;
+        }
+
+        button:hover > svg {
+        font-size: 1.2em;
+        transform: translateX(6px);
+        }
+
+        button:hover {
+        box-shadow: 10px 10px 40px #d1d1d1;
+        transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-div">
+        <section class="border-section">
+            <div class="img-div">
+                <h1 id="simple-weather-app">Simple Weather App</h1>
+            </div>
+            
+            <h1 id="city-heading">Enter your city</h1>
+
+            <div>
+                <form class="form-div" action="/" method="post">
+                    <div class="group">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                            <g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g>
+                        </svg>
+                        <input name="city" placeholder="Search" type="search" class="input">
+                    </div>
+
+                    <button>
+                        <span>Go</span>
+                        <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linejoin="round" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
